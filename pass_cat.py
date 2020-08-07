@@ -11,10 +11,10 @@ def password(x):
     if 7 <= len(x) <= 20:
         # Check for reptitive charracter occurence
         if re.search(r'(.)\1\1', x):
-            return "Weak Password! Password has repeating characters more than three times"
+            return "Weak Password! Password has repeating characters more than three times."
         # Check for repetitive string occurence
         if re.search(r'(..)(.*?)\1', x):
-            return "Weak Password! Password has repeating strings more than once"
+            return "Weak Password! Password has strings repeating more than once."
         else:
             return "Strong Password!"
     else:
